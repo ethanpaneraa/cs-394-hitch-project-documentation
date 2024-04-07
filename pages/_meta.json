@@ -1,5 +1,7 @@
 {
   "index": "Introduction",
   "tech": "Tech Stack",
-  "setup": "Setup"
+  "setup": "Setup", 
+  "frontend": "Frontend",
+  "backend": "Backend"
 }

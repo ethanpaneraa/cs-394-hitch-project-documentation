@@ -1,0 +1,52 @@
+# Setting up Hitch on Your Local Machine
+
+## Prerequisites
+
+Before being able to run Hitch on your local machine, you will need to have the following already installed: 
+
+- [Node.js](https://nodejs.org/en/)
+- [npm](https://www.npmjs.com/get-npm)
+
+## Installation
+
+1. Clone the repository to your local machine using the following command:
+
+```bash
+git clone https://github.com/ethanpaneraa/cs-394-hitch-project-documentation.git
+```
+
+2. Navigate to the `cs-394-hitch-project-documentation` directory:
+
+```bash
+cd cs-394-hitch-project-documentation
+```
+
+3. Install the necessary dependencies:
+```bash
+npm install
+```
+
+4. Start the application:
+```bash
+npm run dev
+```
+
+5. Open your browser and navigate to `http://localhost:3000` to view the application.
+
+
+## Envrioment Variables
+
+In order to run the application, you will need to create a `.env` file in the root directory of the project. The `.env` file should contain the following variables:
+
+```
+VITE_API_BASE_URL = YOUR_DEPLOYED_API_URL
+VITE_GOOGLE_MAPS_API_KEY = YOUR_GOOGLE_MAPS_API_KEY
+```
+
+In order to obtain the API keys you need to run the application, you will need to create a Google Cloud Platform project and enable the Google Maps JavaScript API. You can find more information on how to do this [here](https://developers.google.com/maps/gmp-get-started).
+
+In terms of running our API locally or on a deployed server, you will need to deploy the backend of the application to a server and use the URL of the server as the value for the `VITE_API_BASE_URL` variable. For our project, we used [Render](https://render.com/) to deploy the backend of the application as we found it to be the most straightforward and easy to use! 
+
+## Database
+
+You also need to have a PostgresSQL database either running locally or on a server. Again, for our project, we used Render to deploy the database as well since Render offers a managed PostgresSQL database service that is easy to use and connect to the backend of our application. You can find more information on how to deploy a PostgresSQL database on Render [here](https://render.com/docs/deploy-postgresql). For connecting to our database, we used the python library `psycopg2` to connect to the database and execute queries.
